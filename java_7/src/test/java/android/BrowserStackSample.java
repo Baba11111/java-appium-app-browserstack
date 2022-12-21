@@ -22,26 +22,25 @@ public class BrowserStackSample {
     	DesiredCapabilities caps = new DesiredCapabilities();
     	
     	// Set your access credentials
-    	caps.setCapability("browserstack.user", "YOUR_USERNAME");
-    	caps.setCapability("browserstack.key", "YOUR_ACCESS_KEY");
+    	caps.setCapability("browserstack.user", "surendragangwar_uPasdU");
+    	caps.setCapability("browserstack.key", "sboWCXprD79UKqRB78sX");
     	
     	// Set URL of the application under test
-    	caps.setCapability("app", "bs://<app-id>");
-    	
-    	// Specify device and os_version for testing
-    	caps.setCapability("device", "Google Pixel 3");
-    	caps.setCapability("os_version", "9.0");
-        
-    	// Set other BrowserStack capabilities
-    	caps.setCapability("project", "First Java Project");
-    	caps.setCapability("build", "browserstack-build-1");
-    	caps.setCapability("name", "first_test");
+    	cap.setCapability("deviceName", "OnePlus Nord CE 2");
+			cap.setCapability("udid", "6PYDAMBYAYOJUOCA");
+			cap.setCapability("platformName", "Android");
+			cap.setCapability("platformVersion", "12");
+//			cap.setCapability("appPackage", "com.oneplus.calculator");
+//			cap.setCapability("appActivity", "com.oneplus.calculator.Calculator");
+			cap.setCapability("appPackage", "com.cdac.qrticketing");
+			cap.setCapability("appActivity", "com.cdac.qrticketing.SplashScreen");
+			
        
     	
     	// Initialise the remote Webdriver using BrowserStack remote URL
     	// and desired capabilities defined above
         AndroidDriver<AndroidElement> driver = new AndroidDriver<AndroidElement>(
-        		new URL("http://hub.browserstack.com/wd/hub"), caps);
+        		new URL("http://127.0.0.1:4725/wd/hub"), caps);
         
 
         // Test case for the BrowserStack sample Android app. 
